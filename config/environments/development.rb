@@ -31,6 +31,14 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :mailgun
+  puts "MAILGUN KEY"
+  puts ENV['MAILGUN_API_KEY']
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV['MAILGUN_API_KEY'],
+    domain: 'getpurpletag.com',
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   def signup
     @user = User.new(signup_params)
     if @user.save
+      SignupMailer.welcome_email(@user).deliver_later
       render json: @user
     else
       render json: { errors: @user.errors.full_messages }, status: 422
@@ -18,6 +19,6 @@ class PagesController < ApplicationController
   private
 
   def signup_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :default_airport)
   end
 end

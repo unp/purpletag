@@ -29,7 +29,8 @@ $(function (){
       data: {
         user: {
           name: $("#signup-form-name").val(),
-          email: $("#signup-form-email").val()
+          email: $("#signup-form-email").val(),
+          default_airport: $("#signup-form-default-airport").val()
         }
       },
       url: "/signup.json",

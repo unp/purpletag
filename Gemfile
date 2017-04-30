@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass'
 gem 'mailgun-ruby'
+gem 'dotenv-rails'
+gem 'bootstrap-select-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
