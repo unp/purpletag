@@ -16,7 +16,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require bootstrap/modal
-//= require select2
 
 
 $(function (){
