@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-overrides";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "select2";
+@import "select2-bootstrap";
+@import "success";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: $brand-primary;
+}
+
+.hero {
+  padding-top: 3em;
+  padding-bottom: 6em;
+  background: linear-gradient(#8537B2, #BB68D9) no-repeat;
+  .headline {
+    max-width: 520px;
+    height: 100%;
+    margin: 0 auto;
+    p {
+      padding-top: 2em;
+      padding-bottom: 1.5em;
+      color: #E6D7EF;
+      line-height: 1.4em;
+      font-size: 1.4em;
+    }
+    h1 {
+      color: #FFFFFF;
+      line-height: 1.4em;
+      padding-top: 2em;
+    }
+  }
+}
+
+.btn-outlined {
+  background: white;
+  color: $brand-primary;
+}
+
+.signup-form {
+  padding: 2em 4em;
+}
+
+.btn-md {
+  font-size: 1.2em;
+  padding: 8px 14px;
+}
+
+// Vertically center modal
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#signup-errors {
+  margin-top: 2em;
+  color: #F07387;
+}
+
+#form-success {
+  display: none;
+}
+
+.success-text {
+  text-align: center;
+}

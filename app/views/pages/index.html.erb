@@ -1,0 +1,49 @@
+<div class="hero">
+  <div class="container">
+    <%= link_to image_tag('logo', class: 'logo'), '/' %>
+    <div class="col headline">
+      <h1>Never Deal with Baggage Claim Again.</h1>
+      <p>PurpleTag fetches your bags from baggage claim and drives them to your final destination</p>
+      <button type="button" id="request" class="btn btn-outlined btn-lg">Request Tags</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form id="signup-form">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="signup-form">
+            <div class="form-group row">
+              <h3>Request your free tags today</h3>
+              <p class="errors" id="signup-errors"></p>
+            </div>
+            <div class="form-group row">
+              <input type="text" class="form-control" placeholder="Name" id="signup-form-name">
+            </div>
+            <div class="form-group row">
+              <input type="text" class="form-control" placeholder="Email" id="signup-form-email">
+            </div>
+            <div class="form-group row">
+              <select id="default-sairport">
+                <option value="BOS">Boston Logan</option>
+                <option value="CMH">Columbus</option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <button type="submit" class="btn btn-primary btn-md">Request Tags</button>
+            </div>
+          </div>
+        </form>
+        <div id="form-success">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="success-text">Thanks for signing up!</h3>
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+          <h4 class="success-text">Check your email to claim your tags!</h4>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
