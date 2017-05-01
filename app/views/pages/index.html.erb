@@ -4,11 +4,47 @@
     <div class="col headline">
       <h1>Never Deal with Baggage Claim Again.</h1>
       <p>PurpleTag retrives your bags from baggage claim and hand-delivers them to your final destination</p>
-      <a id="request" class="btn btn-outlined btn-lg">Request Tags</a>
+      <button type="button" id="request" class="btn btn-outlined btn-lg">Request Tags</button>
     </div>
   </div>
 </div>
-
+<div class="container how">
+  <h2 class="text-center">How it Works</h2>
+  <div class="row text-center">
+    <div class="col-md-4 step">
+      <%= image_tag "itinerary" %>
+      <h3>Provide Us Your Itinerary</h3>
+      <p>Forward your trip details to our travel concierge.</p>
+    </div>
+    <div class="col-md-4 step">
+      <%= image_tag "tag" %>
+      <h3>Receive Complimentary Tags</h3>
+      <p>Attach tags to bags so we can easily locate your bags.</p>
+    </div>
+    <div class="col-md-4 step">
+      <%= image_tag "car" %>
+      <h3>Skip Baggage Claim</h3>
+      <p>Get to your destination 30 minutes to one hour faster.</p>
+    </div>
+  </div>
+</div>
+<div class="faq">
+  <div class="container">
+    <h2 class="heading">Frequently Asked Questions</h2>
+    <br />
+    <p><strong>How long will it take for my bags to arrive at my hotel?</strong></p>
+    <p>Up to 4 hours, depending on distance to final destination and traffic conditions.</p>
+    <br />
+    <p><strong>Where do I pick up my bags at the hotel?</strong></p>
+    <p>We will ensure your bags are stored safely at the front desk or brought directly to your room.</p>
+    <br />
+    <p><strong>What happens if my bags get lost?</strong></p>
+    <p>We are so confident in our operations that we will reimburse up to $1,000 of luggage value per bag.</p>
+    <br />
+    <p><strong>What if my flight is delayed?</strong></p>
+    <p>Our travel concierge tracks all flights in real time and will dispatch our valet at the appropriate time.</p>
+  </div>
+</div>
 <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -86,4 +122,8 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<div class="copyright">Copyright &copy; <%= Time.now.strftime('%Y') %> PurpleTag. All Rights Reserved.</div>
+<div class="tagline">
+  <p><%= image_tag "footer_tag" %></p>
+  <h3>White Glove Baggage Delivery</h3>
+  <div class="copyright">Copyright &copy; <%= Time.now.strftime('%Y') %> PurpleTag. All Rights Reserved.</div>
+</div>
