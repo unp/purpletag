@@ -9,7 +9,8 @@ class PagesController < ApplicationController
   def signup
     @user = User.new(signup_params)
     if @user.save
-      SignupMailer.welcome_email(@user).deliver_later
+      SignupMailer.signup_notification(@user).deliver_now
+      SignupMailer.welcome_email(@user).deliver_now
       render json: @user
     else
       render json: { errors: @user.errors.full_messages }, status: 422

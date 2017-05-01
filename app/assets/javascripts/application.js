@@ -16,7 +16,9 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require bootstrap/modal
-
+//= require bootstrap-select
+//= require bootstrap/alert
+//= require bootstrap/dropdown
 
 $(function (){
   $("#request").click(function() {
@@ -38,6 +40,11 @@ $(function (){
       success: function(data){
         $("#signup-form").hide();
         $("#form-success").show();
+        fbq('track', 'CompleteRegistration', {
+          name: $("#signup-form-name").val(),
+          email: $("#signup-form-email").val(),
+          default_airport: $("#signup-form-default-airport").val()
+        });
       },
       error: function(xhr) {
         $("#signup-errors").html('There was an error signing up. Please make sure your name and email address are correct.');
