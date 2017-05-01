@@ -3,7 +3,7 @@
     <%= link_to image_tag('logo', class: 'logo'), '/' %>
     <div class="col headline">
       <h1>Never Deal with Baggage Claim Again.</h1>
-      <p>PurpleTag fetches your bags from baggage claim and drives them to your final destination</p>
+      <p>PurpleTag retrives your bags from baggage claim and hand-delivers them to your final destination</p>
       <button type="button" id="request" class="btn btn-outlined btn-lg">Request Tags</button>
     </div>
   </div>
@@ -21,13 +21,13 @@
               <p class="errors" id="signup-errors"></p>
             </div>
             <div class="form-group row">
-              <input type="text" class="form-control" placeholder="Name" id="signup-form-name">
+              <input type="text" class="form-control" placeholder="Name" id="signup-form-name" tabindex=1>
             </div>
             <div class="form-group row">
-              <input type="text" class="form-control" placeholder="Email" id="signup-form-email">
+              <input type="text" class="form-control" placeholder="Email" id="signup-form-email" tabindex=2>
             </div>
             <div class="form-group row">
-              <select class="selectpicker" data-live-search="true" id="signup-form-default-airport" data-width="100%" title="Choose an airport...">
+              <select class="selectpicker" data-live-search="true" id="signup-form-default-airport" data-width="100%" title="Choose an airport..." tabindex=3>
                 <option data-tokens="Hartsfield Jackson Atlanta International Atlanta ATL" value="ATL">Hartsfield Jackson Atlanta International (ATL)</option>
                 <option data-tokens="Chicago O’Hare International Chicago ORD" value="ORD">Chicago O’Hare International (ORD)</option>
                 <option data-tokens="Los Angeles International Los Angeles LAX" value="LAX">Los Angeles International (LAX)</option>
@@ -86,3 +86,4 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<div class="copyright">Copyright &copy; <%= Time.now.strftime('%Y') %> PurpleTag. All Rights Reserved.</div>
