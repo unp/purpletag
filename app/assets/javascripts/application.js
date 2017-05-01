@@ -45,6 +45,9 @@ $(function (){
           email: $("#signup-form-email").val(),
           default_airport: $("#signup-form-default-airport").val()
         });
+        if ($("#signup-form-default-airport").val() !== 'SFO') {
+          $("#success-message").text('This airport is currently not supported. We will email you as soon as we get to your city.')
+        }
       },
       error: function(xhr) {
         $("#signup-errors").html('There was an error signing up. Please make sure your name and email address are correct.');
